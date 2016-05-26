@@ -1,0 +1,19 @@
+name       : nuvola-app-8tracks
+version    : 5.1
+release    : 1
+source     :
+    - https://github.com/tiliado/nuvola-app-8tracks/archive/5.1.tar.gz : 643a1f3161ee1fd895ff7508ec0d901107a83d60e4614584f414941a375a9797
+license    : BSD-2-Clause
+component  : desktop.multimedia
+summary    : 8tracks Integration for Nuvola Player 3.
+description: |
+    Integration of 8tracks into your linux desktop via Nuvola Player.
+builddeps  :
+    - scour
+    - librsvg-devel
+rundeps    :
+    - nuvolaplayer
+build      : |
+    %make 
+install    : |
+    %make_install DEST="$installdir/usr/share/nuvolaplayer3/web_apps"
